@@ -1,5 +1,4 @@
 from Suma import *
-from Resta import *
 from Factorial import *
 from Division import *
 from Palindromo import *
@@ -12,8 +11,7 @@ while respuesta!=0:
     try:
         print('Selecciona una opcion: ')
         print('1.- Suma')
-        print('2.- Resta')
-        print('3.- Factorial')
+        print('2.- Factorial')
         print('4.- División')
         print('5.- Palíndromo')
         print('6.- Fibronacci')
@@ -22,17 +20,11 @@ while respuesta!=0:
         respuesta = int(input('Respuesta: '))
 
         if respuesta == 1:
-            n = int(input('Ingrese un número: '))
-            v = int(input('Ingrese las veces: '))
-            Suma.suma(n,v)
+            numero = int(input('Ingrese un número: '))
+            print(Suma.suma(numero))      
         elif respuesta == 2:
-            n = int(input('Ingrese un número: '))
-            v = int(input('Ingrese las veces: '))
-            Resta.resta(n,v)      
-        elif respuesta == 3:
-            n = int(input('Ingrese un número: '))
-            v = int(input('Ingrese las veces: '))
-            Factorial.factorial(n,v)
+            numero = int(input('Ingrese un número: '))
+            Factorial.factorial(numero)
         elif respuesta == 4:
             n = int(input('Ingrese un número: '))
             v = int(input('Ingrese las veces: '))
@@ -41,8 +33,8 @@ while respuesta!=0:
             frase = input(str('Ingrese la frase palíndroma: '))
             Palindromo.palindromo(frase)
         elif respuesta == 6:
-            n = input(int('Ingrese el numero: '))
-            Fibronacci.fibronacci(n)
+            numero = input(int('Ingrese el numero: '))
+            Fibronacci.fibronacci(numero)
         elif respuesta == 7:
             uno = input(int('Primer numero: '))
             dos = input(int('Segundo numero: '))
