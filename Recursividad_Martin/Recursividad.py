@@ -4,6 +4,7 @@ from Factorial import *
 from Division import *
 from Palindromo import *
 from Fibronacci import *
+from Hanoi import *
 
 respuesta = 1
 
@@ -16,6 +17,7 @@ while respuesta!=0:
         print('4.- División')
         print('5.- Palíndromo')
         print('6.- Fibronacci')
+        print('7.- Torres de Hanoi')
         print('0.- Salir')
         respuesta = int(input('Respuesta: '))
 
@@ -41,6 +43,11 @@ while respuesta!=0:
         elif respuesta == 6:
             n = input(int('Ingrese el numero: '))
             Fibronacci.fibronacci(n)
+        elif respuesta == 7:
+            uno = input(int('Primer numero: '))
+            dos = input(int('Segundo numero: '))
+            tres = input(int('Tercer numero: '))
+            Hanoi.hanoi(uno,dos,tres)
         elif respuesta == 0:
             print('Saliendo de la aplicación')
         else:
