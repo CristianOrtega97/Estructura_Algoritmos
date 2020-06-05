@@ -6,7 +6,13 @@ class Palindromo:
 
     @staticmethod
     def palindromo(frase,primera_pos,ultima_pos):
-        if len(frase) < 1:
+        if primera_pos == ultima_pos:
+            return True
+        elif primera_pos == ultima_pos+1:
             return True
         else: 
-            return "Nada"
+            aux1 = frase[primera_pos]
+            aux2 = frase[ultima_pos]
+            frase[primera_pos] = aux2
+            frase[ultima_pos] = aux1
+            return Palindromo.palindromo(frase, primera_pos + 1,ultima_pos-1)

@@ -24,10 +24,17 @@ while respuesta!=0:
             print(Factorial.factorial(numero))        
         elif respuesta == 3:
             frase = str(input('Ingrese la frase palíndroma: '))
+            fraseoriginal = frase.replace(" ","")
             frase = frase.replace(" ","")
+            frase = list(frase)
+            fraseoriginal = list(fraseoriginal)
             ultima_pos = len(frase)-1  #Ultima posición
             primera_pos = 0   #Primer posicion
             Palindromo.palindromo(frase,primera_pos,ultima_pos)
+            if (frase == fraseoriginal):
+                print('La frase es Palindromo')
+            else:
+                print('La frase no es Palindromo')
         elif respuesta == 4:
             numero = int(input('Ingrese el numero: '))
             print(Fibonacci.fibonacci(numero))
