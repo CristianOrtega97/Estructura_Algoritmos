@@ -6,4 +6,4 @@ class Hanoi:
 
     @staticmethod
     def hanoi(uno,dos,tres):
-        pass  
+        pass
