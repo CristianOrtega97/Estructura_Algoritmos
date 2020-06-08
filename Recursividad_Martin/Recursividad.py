@@ -18,11 +18,11 @@ while respuesta!=0:
         print('3.- Potencia con Multiplicación')
         print('4.- Multiplicacion con Sumas')
         print('5.- División con Restas')
-        print('6.- Potencia con Sumas') #Pendiente
-        print('7.- Palindromo') 
-        print('8.- ')  #Pendiente
+        print('6.- Potencia con Sumas') 
+        print('7.- Palindromo')
+        print('8.- Torres de Hanoi')  #Pendiente
         print('9.- Invertir la Frase')
-        print('10.- Funcion For') #Pendiente
+        print('10.- Funcion For')
         print('11.- Fibonacci')
         print('0.- Salir')
         respuesta = int(input('Respuesta: '))
@@ -41,14 +41,21 @@ while respuesta!=0:
         elif respuesta == 4:
             numero = int(input('Ingrese el numero a multiplicar: '))
             veces = int(input('Ingrese el numero de veces a realizar: '))
-            Multiplicacion_Suma.multiplicacion_suma(numero,veces)          
+            resultado = 0
+            Multiplicacion_Suma.multiplicacion_suma(numero,resultado,veces)          
         elif respuesta == 5:
             numero = int(input('Ingrese el Dividendo: '))
             resta = int(input('Ingrese el Divisor: '))
             veces = 0
             Division_Restas.division_restas(numero,resta,veces)
         elif respuesta == 6:
-            pass
+            numero = int(input('Ingrese el numero a multiplicar: '))
+            veces = int(input('Ingrese el numero de veces a realizar: '))
+            resultado = 0
+            veces_exponente = veces
+            numero_exponente = Multiplicacion_Suma.multiplicacion_suma(numero,resultado,veces)
+            resultado_exponente = numero_exponente
+            Exponente_Multiplicacion.exponente_multiplicacion(numero_exponente,resultado_exponente,veces_exponente)
         elif respuesta == 7:
             frase = str(input('Ingrese la frase palíndroma: '))
             fraseoriginal = frase.replace(" ","")
@@ -72,8 +79,8 @@ while respuesta!=0:
             primera_pos = 0   #Primer posicion
             Invertir_Frase.invertir_frases(frase,primera_pos,ultima_pos)
         elif respuesta == 10:
-            #Investigar jijiji
-            pass
+            repeticion = int(input('Ingrese las veces a repetir: '))
+            Funcion_For.funcion_for(repeticion)
         elif respuesta == 11:
             numero = int(input('Ingrese el Numero: '))
             print(Fibonacci.fibonacci(numero))

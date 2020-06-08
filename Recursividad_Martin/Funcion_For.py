@@ -4,4 +4,9 @@ class Funcion_For:
 
     @staticmethod
     def funcion_for(repeticion):
-        pass
+        if repeticion == 0:
+            pass
+
+        else:
+            print('Recursividad')
+            return Funcion_For.funcion_for(repeticion-1)
