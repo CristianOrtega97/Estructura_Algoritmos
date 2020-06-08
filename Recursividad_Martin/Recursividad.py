@@ -1,4 +1,5 @@
 from Funcion_For import *
+from Invertir_Frase import *
 from Suma import *
 from Factorial import *
 from Palindromo import *
@@ -20,7 +21,7 @@ while respuesta!=0:
         print('6.- Potencia con Sumas') #Pendiente
         print('7.- Palindromo') 
         print('8.- ')  #Pendiente
-        print('9.- ')  #Pendiente
+        print('9.- Invertir la Frase')
         print('10.- Funcion For') #Pendiente
         print('11.- Fibonacci')
         print('0.- Salir')
@@ -64,7 +65,12 @@ while respuesta!=0:
         elif respuesta == 8:
             pass
         elif respuesta == 9:
-            pass
+            frase = str(input('Ingrese la frase palíndroma: '))
+            frase = list(frase)
+            fraseoriginal = list(frase)
+            ultima_pos = len(frase)-1  #Ultima posición
+            primera_pos = 0   #Primer posicion
+            Invertir_Frase.invertir_frases(frase,primera_pos,ultima_pos)
         elif respuesta == 10:
             #Investigar jijiji
             pass
