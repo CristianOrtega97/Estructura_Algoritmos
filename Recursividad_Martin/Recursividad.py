@@ -7,6 +7,7 @@ from Fibonacci import *
 from Multiplicacion_Sumas import *
 from Division_Restas import *
 from Exponente_Multiplicacion import *
+from Hanoi import *
 
 respuesta = 1
 
@@ -70,7 +71,11 @@ while respuesta!=0:
             else:
                 print('La frase no es Palindromo')
         elif respuesta == 8:
-            pass
+                n = int(input('Ingrese el numero de aros: '))
+                inicio = input('¿De que torre parte? ')
+                final = input('¿A que torre va? ')
+                medio = input('¿Cual sobra? ')
+                Hanoi.hanoi(n,inicio,final,medio)
         elif respuesta == 9:
             frase = str(input('Ingrese la frase palíndroma: '))
             frase = list(frase)
