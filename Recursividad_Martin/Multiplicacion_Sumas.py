@@ -1,13 +1,11 @@
 class Multiplicacion_Suma:
-    def __init__(self,numero,resultado,veces):
+    def __init__(self,numero,veces):
         self.numero = numero
-        self.resultado = resultado
         self.veces = veces
     
     @staticmethod
-    def multiplicacion_suma(numero,resultado,veces):
+    def multiplicacion_suma(numero,veces):
         if veces == 0:
-            print('El resultado de la multiplicacion es: ', resultado)
-            return resultado
+            return 0
         else:
-            return Multiplicacion_Suma.multiplicacion_suma(numero,numero+resultado,veces-1)
+            return numero + Multiplicacion_Suma.multiplicacion_suma(numero,veces-1)

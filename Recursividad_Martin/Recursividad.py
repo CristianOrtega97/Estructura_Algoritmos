@@ -36,27 +36,22 @@ while respuesta!=0:
             print(Suma.suma(numero))
         elif respuesta == 3:
             numero = int(input('Ingrese el Numero: '))
-            exponente = int(input('Ingrese el Exponente: '))-1
-            resultado = numero
-            Exponente_Multiplicacion.exponente_multiplicacion(numero,resultado,exponente) 
+            exponente = int(input('Ingrese el Exponente: '))
+            print('El resultado de la potencia es: ',Exponente_Multiplicacion.exponente_multiplicacion(numero,exponente))
         elif respuesta == 4:
             numero = int(input('Ingrese el numero a multiplicar: '))
             veces = int(input('Ingrese el numero de veces a realizar: '))
-            resultado = 0
-            Multiplicacion_Suma.multiplicacion_suma(numero,resultado,veces)          
+            print(Multiplicacion_Suma.multiplicacion_suma(numero,veces))        
         elif respuesta == 5:
             numero = int(input('Ingrese el Dividendo: '))
-            resta = int(input('Ingrese el Divisor: '))
-            veces = 0
-            Division_Restas.division_restas(numero,resta,veces)
+            veces = int(input('Ingrese el Divisor: '))
+            print(Division_Restas.division_restas(numero,veces))
         elif respuesta == 6:
             numero = int(input('Ingrese el numero a multiplicar: '))
             veces = int(input('Ingrese el numero de veces a realizar: '))
-            resultado = 0
             veces_exponente = veces
-            numero_exponente = Multiplicacion_Suma.multiplicacion_suma(numero,resultado,veces)
-            resultado_exponente = numero_exponente
-            Exponente_Multiplicacion.exponente_multiplicacion(numero_exponente,resultado_exponente,veces_exponente)
+            numero_exponente = Multiplicacion_Suma.multiplicacion_suma(numero,veces)
+            print(Exponente_Multiplicacion.exponente_multiplicacion(numero_exponente,veces_exponente))
         elif respuesta == 7:
             frase = str(input('Ingrese la frase palíndroma: '))
             fraseoriginal = frase.replace(" ","")

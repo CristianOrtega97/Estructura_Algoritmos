@@ -1,12 +1,11 @@
 class Division_Restas:
-    def __init__(self,numero,resta,veces):
+    def __init__(self,numero,veces):
         self.numero = numero
-        self.resta = resta
         self.veces = veces
 
     @staticmethod    
-    def division_restas(numero,resta,veces):
-        if numero < resta:
-            return print('El resultado de la división es: ',veces)
+    def division_restas(numero,veces):
+        if numero == 0:
+            return 0
         else:
-            return Division_Restas.division_restas(numero-resta,resta,veces+1)
+            return 1 + Division_Restas.division_restas(numero-veces,veces)
