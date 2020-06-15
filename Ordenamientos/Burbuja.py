@@ -7,7 +7,6 @@ class Burbuja:
     @staticmethod    
     def sort (lista):
         start_time = time.time()
-        print(str(lista))
         for i in range(len(lista)-1):
             for j in range(len(lista)-1):
                 if lista[j] > lista[j+1]:
