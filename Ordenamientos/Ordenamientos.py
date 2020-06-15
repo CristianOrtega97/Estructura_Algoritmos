@@ -9,7 +9,7 @@ tiempo_seleccion = 0.0
 tiempo_insercion = 0.0
 tiempo_quicksort = 0.0
 
-lista = [random.randrange(1, 100, 1) for i in range(100000000000000)]
+lista = [random.randrange(1, 100, 1) for i in range(10000)]
 
 print('El resultado con: 1000 datos:')
 print('El tiempo de Burbuja es: ',Burbuja.sort(lista),' micro segundos')
