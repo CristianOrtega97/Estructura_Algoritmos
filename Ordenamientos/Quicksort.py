@@ -6,5 +6,16 @@ class Quicksort:
 
     @staticmethod    
     def sort (lista):
-        start_time = time.time()
-        return ((time.time() - start_time)*1000000)
+        if len(lista) <= 1:
+            return lista
+        else:
+            pivote = lista.pop()
+        elemento_mayor = []
+        elemento_menor = []
+        
+        for elemento in lista:
+            if elemento > pivote:
+                elemento_mayor.append(elemento)
+            else:
+                elemento_menor.append(elemento_menor)
+        return Quicksort.sort(elemento_menor) + [pivote] + Quicksort.sort(elemento_mayor)
