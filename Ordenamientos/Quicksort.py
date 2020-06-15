@@ -1,4 +1,5 @@
 import time
+from random import randint
 
 class Quicksort:
     def __init__(self,lista):
@@ -8,14 +9,15 @@ class Quicksort:
     def sort (lista):
         if len(lista) <= 1:
             return lista
-        else:
-            pivote = lista.pop()
-        elemento_mayor = []
-        elemento_menor = []
+            
+        elemento_igual,elemento_mayor,elemento_menor = [],[],[]
+        pivote = lista[randint(0,len(lista)-1)]
         
         for elemento in lista:
-            if elemento > pivote:
-                elemento_mayor.append(elemento)
+            if elemento < pivote:
+                elemento_menor.append(elemento)
+            elif elemento == pivote:
+                elemento_igual.append(elemento)
             else:
-                elemento_menor.append(elemento_menor)
-        return Quicksort.sort(elemento_menor) + [pivote] + Quicksort.sort(elemento_mayor)
+                elemento_mayor.append(elemento)
+        return Quicksort.sort(elemento_menor) + elemento_igual + Quicksort.sort(elemento_mayor)
