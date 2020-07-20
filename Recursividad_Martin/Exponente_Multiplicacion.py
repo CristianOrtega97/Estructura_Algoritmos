@@ -9,3 +9,4 @@ class Exponente_Multiplicacion:
             return 1
         else:
             return numero * Exponente_Multiplicacion.exponente_multiplicacion(numero,exponente-1)
+            

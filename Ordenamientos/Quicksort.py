@@ -1,4 +1,3 @@
-import time
 from random import randint
 
 class Quicksort:
@@ -20,4 +19,4 @@ class Quicksort:
                 elemento_igual.append(elemento)
             else:
                 elemento_mayor.append(elemento)
-        return Quicksort.sort(elemento_menor) + elemento_igual + Quicksort.sort(elemento_mayor)
+        return Quicksort.sort(elemento_menor) + elemento_igual + Quicksort.sort(elemento_mayor)   
