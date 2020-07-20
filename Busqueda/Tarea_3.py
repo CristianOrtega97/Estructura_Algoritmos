@@ -2,6 +2,7 @@ import pyodbc
 from Quicksort import *
 from Connection import *
 import numpy
+from Busqueda import *
 
 conn = pyodbc.connect(
     "Driver={SQL Server};"
@@ -11,10 +12,16 @@ conn = pyodbc.connect(
 )
 
 cursor = Connection.read(conn)
-
-lista=[('la paz', 1,15),('Escultura',1,26)]
-Quicksort.sort(lista)
-print(lista)
-
 Quicksort.sort(cursor)
-print(cursor)
+
+objetivo = input("Ingresar Valor a Buscar: ")
+lista = []
+lista = Busqueda.busqueda(cursor,objetivo,lista)
+if not lista:
+    print("No existe ninguna coincidencia")
+
+if lista:
+    print("Coincidencias: ")
+    print("")
+    print(lista)
+
