@@ -23,5 +23,6 @@ if not lista:
 if lista:
     print("Coincidencias: ")
     print("")
-    print(lista)
+    for i in range(len(lista)):
+        print(lista[i])
 
