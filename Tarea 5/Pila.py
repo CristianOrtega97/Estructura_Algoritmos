@@ -13,30 +13,69 @@ class Pila:
         contador=0
         if longitud1>longitud2:
             contador=longitud1
+            diferencia = longitud1 - longitud2
         elif longitud1<longitud2:
-            contador=longitud2
+            num_aux=numero2
+            numero2=numero1
+            numero1=num_aux
+            long_aux=longitud2
+            longitud2=longitud1
+            longitud1=long_aux
+            contador=longitud1
+            diferencia = longitud1 - longitud2
+            longitud_total = contador
         else:
-            longitud1=contador
+            contador=longitud1
+            diferencia=0
         longitud_total = contador
         for i in range(contador):
-            if longitud1>longitud2:
-                numTemp1=numero1.pop()
-                resultado.append(str(numTemp1))
-                longitud_total-=1
-                longitud1-=1
-            elif longitud1<longitud2:
-                numTemp2=numero2.pop()
-                resultado.append(str(numTemp2))
-                longitud_total-=1
-                longitud2-=1
+            if diferencia != 0:
+                if longitud1>longitud2:
+                    if longitud2!=0:
+                        numTemp1 = numero1.pop()
+                        numTemp2 = numero2.pop()
+                        numTemp1=int(numTemp1)
+                        numTemp2=int(numTemp2)
+                        resTemp = numTemp1 + numTemp2
+                        if resTemp>=9:
+                            resTemp = [int(x) for x in str(resTemp)]
+                            numTemp1=resTemp.pop()
+                            numTemp2=resTemp.pop()
+                            int(numTemp1)
+                            int(numTemp2)
+                            if longitud1!=0:
+                                aux=numero1.pop()
+                                numTemp2+=aux
+                                numero1.append(str(numTemp2))
+                                resultado.append(str(numTemp1))
+                                print(numTemp1)
+                                print(numTemp2)
+                                longitud1-=1
+                                longitud2-=1
+                            else:
+                                for i in range(longitud1):
+                                    numTemp1 = numero1.pop()
+                                    resultado.append(str(numTemp1)) 
+                                    longitud1-=1
+                                    longitud2-=1     
+                        else:
+                            resultado.append(str(resTemp))
+                            print(resultado)
+                            longitud1-=1
+                            longitud2-=1
+                    elif longitud2==0 and longitud1>0:
+                        resTemp=numero1.pop()
+                        resultado.append(str(resTemp))
+                        longitud1-=1
+                elif longitud1<longitud2:
+                    pass
+                else:
+                    resTemp=numero1.pop()
+                    resultado.append(str(resTemp))
+                    longitud1-=1
+                    print(resultado)
             else:
-                numTemp1=numero1.pop()
-                numTemp2=numero2.pop()
-                int(numTemp1)
-                int(numTemp2)
-                resTemp = numTemp1 + numTemp2
-                resultado.append(str(resTemp))
-                longitud_total-=1
+                pass                        
         resultado.reverse()
         print(resultado)
         resultado_final=resultado_final.join(resultado)
