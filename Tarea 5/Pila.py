@@ -67,8 +67,6 @@ class Pila:
                         resTemp=numero1.pop()
                         resultado.append(str(resTemp))
                         longitud1-=1
-                elif longitud1<longitud2:
-                    pass
                 else:
                     resTemp=numero1.pop()
                     resultado.append(str(resTemp))

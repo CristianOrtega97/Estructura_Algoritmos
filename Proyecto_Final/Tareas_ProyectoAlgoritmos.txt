@@ -1,0 +1,14 @@
+- Investigar que son Nodos (EN PROGRESO)
+- Investigar Algoritmo Floyd (PENDIENTE)
+- Agregar status a tabla linea_trenes (PENDIENTE)
+-Crear catalogo de puntos de interés  (PENDIENTE)
+- Agregar columna puntos de interés con foreign keys  (PENDIENTE)
+- Modulo Administrador (Modificar información de estaciones) (Deshabilitar/habilitar estaciones)  (PENDIENTE)
+- Modulo Usuario (El origen y el destino están fuera de la malla de los nodos de cruce.)          (PENDIENTE)
+
+NOTA: La ruta del origen a la estación de cruce más cercana, la salida del algoritmo de Floyd (malla) 
+      y la ruta de la estación de cruce más cercana al destino y hasta el destino: 
+      · Tiempo de recorrido 
+      · Puntos de interés en el trayecto 
+      · Transbordos 
+      · Número de transbordos

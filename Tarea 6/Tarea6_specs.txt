@@ -1,0 +1,5 @@
+- Investigar Algoritmo de Fuerza Bruta en Python  (PENDIENTE)
+- Diseño de Listas  (PENDIENTE)
+- Parte 1: La secuencia de salida teniendo como orden de búsqueda: arriba, derecha, abajo, izquierda.  (PENDIENTE)
+- Parte 2: La ruta más corta entrada-salida indicando el orden de búsqueda correspondiente.  (PENDIENTE)
+- Parte 3: La ruta de salida óptima o ruta más corta (algoritmo de fuerza bruta).  (PENDIENTE)
