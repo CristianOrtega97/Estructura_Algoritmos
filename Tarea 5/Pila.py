@@ -73,7 +73,30 @@ class Pila:
                     longitud1-=1
                     print(resultado)
             else:
-                pass                        
+                numTemp1 = numero1.pop()
+                numTemp2 = numero2.pop()
+                numTemp1=int(numTemp1)
+                numTemp2=int(numTemp2)
+                resTemp = numTemp1 + numTemp2
+                if resTemp>=9:
+                    resTemp = [int(x) for x in str(resTemp)]
+                    numTemp1=resTemp.pop()
+                    numTemp2=resTemp.pop()
+                    int(numTemp1)
+                    int(numTemp2)
+                    if longitud1!=0:
+                        aux=numero1.pop()
+                        numTemp2+=aux
+                        numero1.append(str(numTemp2))
+                        resultado.append(str(numTemp1))
+                        print(numTemp1)
+                        print(numTemp2)
+                        longitud1-=1
+                        longitud2-=1
+                    else:
+                        longitud_temp = len(resTemp)
+                        for i in range(longitud_temp):
+                            resultado.append(str(resTemp))                    
         resultado.reverse()
         print(resultado)
         resultado_final=resultado_final.join(resultado)
