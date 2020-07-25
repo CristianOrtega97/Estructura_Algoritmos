@@ -49,7 +49,15 @@ if "." in respuesta1 and "." in respuesta2:
 
     resultado1=Pila.suma(lista_dec1,lista_dec3,resultado)
 
-
+    if ((longitud1+longitud2)/2)!=len(resultado1):
+        listaDec=list(resultado1)
+        print(listaDec)
+        resultado=Pila.suma(lista_dec2,listaDec,resultado)
+        listaDec=list(resultado)
+        for i in range(len(listaDec)):
+            numero1=resultado.pop()
+            lista_dec2.append(int(numero1))
+## FIX!!!!
     resultado=[]
     resultado2=Pila.suma(lista_dec2,lista_dec4,resultado)
     print(resultado2)

@@ -76,6 +76,7 @@ class Pila:
                 resTemp = numTemp1 + numTemp2
                 if resTemp<=9:
                     if longitud1!=1:
+                        
                         resultado.append(str(resTemp))  
                         longitud1-=1
                         longitud2-=1
