@@ -74,15 +74,9 @@ class Pila:
                 numTemp1=int(numTemp1)
                 numTemp2=int(numTemp2)
                 resTemp = numTemp1 + numTemp2
-                if resTemp>9:
-                    if longitud1!=0:
-                        resTemp = [int(x) for x in str(resTemp)]
-                        numTemp1=resTemp.pop()
-                        int(numTemp1)
-                        aux=numero1.pop()
-                        numTemp2+=aux
-                        numero1.append(str(numTemp2))
-                        resultado.append(str(numTemp1))
+                if resTemp<=9:
+                    if longitud1!=1:
+                        resultado.append(str(resTemp))  
                         longitud1-=1
                         longitud2-=1
                     else:

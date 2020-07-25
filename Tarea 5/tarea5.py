@@ -11,6 +11,8 @@ if "." in respuesta1 and "." in respuesta2:
     lista_dec2=[]
     lista_dec3=[]
     lista_dec4=[]
+    longitud1=len(lista_dec1)
+    longitud2=len(lista_dec3)
 
     for i in range(len(lista1)):
         numero1=lista1.pop()
@@ -43,13 +45,11 @@ if "." in respuesta1 and "." in respuesta2:
     lista_dec1.reverse()
     lista_dec2.reverse()
     lista_dec3.reverse()
-    lista_dec4.reverse() 
-    print(lista_dec1)
-    print(lista_dec2)
-    print(lista_dec3)
-    print(lista_dec4)        
+    lista_dec4.reverse()   
+
     resultado1=Pila.suma(lista_dec1,lista_dec3,resultado)
-    print(resultado1)
+
+
     resultado=[]
     resultado2=Pila.suma(lista_dec2,lista_dec4,resultado)
     print(resultado2)
