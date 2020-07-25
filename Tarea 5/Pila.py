@@ -48,8 +48,6 @@ class Pila:
                                 numTemp2+=aux
                                 numero1.append(str(numTemp2))
                                 resultado.append(str(numTemp1))
-                                print(numTemp1)
-                                print(numTemp2)
                                 longitud1-=1
                                 longitud2-=1
                             else:
@@ -60,7 +58,6 @@ class Pila:
                                     longitud2-=1     
                         else:
                             resultado.append(str(resTemp))
-                            print(resultado)
                             longitud1-=1
                             longitud2-=1
                     elif longitud2==0 and longitud1>0:
@@ -71,15 +68,13 @@ class Pila:
                     resTemp=numero1.pop()
                     resultado.append(str(resTemp))
                     longitud1-=1
-                    print(resultado)
             else:
                 numTemp1 = numero1.pop()
                 numTemp2 = numero2.pop()
                 numTemp1=int(numTemp1)
                 numTemp2=int(numTemp2)
                 resTemp = numTemp1 + numTemp2
-                print(resTemp)
-                if resTemp>=9:
+                if resTemp>9:
                     if longitud1!=0:
                         resTemp = [int(x) for x in str(resTemp)]
                         numTemp1=resTemp.pop()
@@ -88,8 +83,6 @@ class Pila:
                         numTemp2+=aux
                         numero1.append(str(numTemp2))
                         resultado.append(str(numTemp1))
-                        print(numTemp1)
-                        print(numTemp2)
                         longitud1-=1
                         longitud2-=1
                     else:
